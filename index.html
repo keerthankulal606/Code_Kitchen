@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MITE KITCHEN – Skip the canteen queue</title>
+<link rel="icon" type="image/png" href="logo1_1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -21,6 +22,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;display:flex;align-items:center;gap:10px}
+.logo img{width:36px;height:36px;object-fit:contain;border-radius:8px;flex-shrink:0}
 .logo i{width:30px;height:30px;border-radius:9px 9px 15px 15px;background:var(--turmeric);display:grid;place-items:center;font-style:normal;font-size:16px}
 nav{display:flex;gap:22px;font-weight:500;color:var(--muted)}
 nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--ink)}
@@ -151,13 +153,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 </style>
 </head>
 <body>
-<div id="login" class="login"><div class="lbox"><div class="lside" id="lside"><div class="logo" style="color:#fff"><i></i>MITE KITCHEN</div><div><h1>Order ahead. Skip the rush.</h1><p>One sign-in for students, faculty, kitchen staff and admins.</p></div></div>
+<div id="login" class="login"><div class="lbox"><div class="lside" id="lside"><div class="logo" style="color:#fff"><img src="logo1_1.png" alt="MITE KITCHEN">MITE KITCHEN</div><div><h1>Order ahead. Skip the rush.</h1><p>One sign-in for students, faculty, kitchen staff and admins.</p></div></div>
 <div class="lform"><h2>Sign in</h2><p class="note" style="margin:6px 0 0">Choose how you use the canteen.</p><div class="roles" id="roles"></div><div class="kinds" id="kinds"></div>
 <label for="uid">ID</label><input class="fld" id="uid" value="Aarav" autocomplete="off"><label for="pw">Password</label><input class="fld" id="pw" type="password" value="demo">
 <div class="err" id="lerr" role="alert"></div><button class="place" id="signin" style="margin-top:4px">Sign in</button><p class="note" style="margin:14px 0 0">Demo mode: any ID and password works. Real accounts need the backend.</p></div></div></div>
 <div id="studentApp" hidden>
 <header><div class="wrap bar">
-  <div class="logo"><i></i>MITE KITCHEN</div>
+  <div class="logo"><img src="logo1_1.png" alt="MITE KITCHEN">MITE KITCHEN</div>
   <nav><a href="#menu">Menu</a><a href="#how">How it works</a><a href="#slots">Crowd today</a></nav>
   <div class="who"><span id="whoS"></span><button class="ghost" data-logout>Log out</button></div><button class="cartbtn" id="openCart" aria-label="Open your order">Your order <b id="count">0</b></button>
 </div></header>
@@ -208,10 +210,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
   <div class="df" id="dfoot"></div>
 </aside>
 </div>
-<div id="kitchenApp" hidden><header><div class="wrap bar"><div class="logo"><i></i>MITE KITCHEN<span class="tag">Kitchen</span></div><div class="who"><span id="whoK"></span><button class="ghost" data-logout>Log out</button></div></div></header>
+<div id="kitchenApp" hidden><header><div class="wrap bar"><div class="logo"><img src="logo1_1.png" alt="MITE KITCHEN">MITE KITCHEN<span class="tag">Kitchen</span></div><div class="who"><span id="whoK"></span><button class="ghost" data-logout>Log out</button></div></div></header>
 <main class="wrap"><div class="head" style="margin-top:28px"><h2>Order board</h2><span class="note" id="kstat"></span></div><div class="kboard" id="kboard"></div>
 <section><div class="head"><h2>Stock</h2></div><p class="note" style="margin-top:-12px">Tap an item to mark it sold out. Students see it as sold out straight away.</p><div class="tabs" id="stock" style="margin-top:12px"></div></section></main></div>
-<div id="adminApp" hidden><header><div class="wrap bar"><div class="logo"><i></i>MITE KITCHEN<span class="tag">Admin</span></div><div class="who"><span id="whoA"></span><button class="ghost" data-logout>Log out</button></div></div></header>
+<div id="adminApp" hidden><header><div class="wrap bar"><div class="logo"><img src="logo1_1.png" alt="MITE KITCHEN">MITE KITCHEN<span class="tag">Admin</span></div><div class="who"><span id="whoA"></span><button class="ghost" data-logout>Log out</button></div></div></header>
 <main class="wrap"><div class="head" style="margin-top:28px"><h2>Business overview, today</h2><span class="note" id="ainsight"></span></div><div class="kpis" id="kpis"></div>
 <div class="pgrid"><div class="panel"><h3>Revenue and cost this week</h3><div id="wk"></div></div><div class="panel"><h3>Top sellers today</h3><div id="top"></div></div></div>
 <div class="pgrid" style="grid-template-columns:1fr 1.3fr"><div class="panel"><h3>Orders by hour</h3><div id="hrs"></div></div><div class="panel"><h3>Live orders</h3><div id="stc" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"></div><div style="overflow-x:auto"><table class="tbl" id="tbl"></table></div></div></div>
